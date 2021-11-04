@@ -1,0 +1,531 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* varibales */
+:root{
+    --main-background: #a0bacc4f;
+    --padding-main-left: 15px;
+    --padding-main-right: 15px;
+    --main-color:#e2eaef;
+    --logo: #382a1b;
+}
+body{
+    font-family: 'Mate SC', serif;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--main-background);
+}
+.logoo{
+    opacity: 50%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.logoo:hover{
+    opacity: 100%;
+}
+.logoo h3{
+    color: red;
+    position: fixed;
+    color: #080403;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 5;
+    right: 0;
+    top: 90%;
+    background-color: #7c7c7e;
+    padding: 6px;
+    /* border-radius: 12px; */
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+/* container */
+.container{
+    padding-left: var(--padding-main-left);
+    padding-right: var(--padding-main-right);
+    margin: 0 auto;
+}
+/* for small screen */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+/* for medium */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* for large screen */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* start header */
+header{
+    padding: 20px;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+header .container .logo{
+    width: 60px;
+}
+header .container .links{
+    position: relative;
+}
+header .container .links .icons{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 11px;
+    position: absolute;
+    right: 0px;
+}
+header .container .links .icons span{
+    background-color: #777;
+    height: 3px;
+    margin-bottom: 5px;
+    width: 30px;
+}
+header .container .links .icons span:nth-child(2){
+    width: 60%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .container .links .icons:hover span:nth-child(2){
+    width: 100%;
+}
+header .container .links ul{
+    width: 200px;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    background-color: #e2eaef;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -10px;
+    top:30px;
+    display: none;
+    z-index: 1;
+}
+header .container .links ul li{
+    margin-bottom: 1px;
+    border-bottom: 1px solid #77777773;
+    padding: 20px;
+}
+header .container .links ul li a{
+    color: black;
+    text-decoration: none;
+}
+header .container .links ul::before{
+    content: " ";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #c2c2c2 transparent;
+    position: absolute;
+    top: -20px;
+    right: 12px;
+}
+header .container .links:hover ul{
+    display: block;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+header .container .links ul li a:hover{
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    max-width: 100%;
+}
+/*END HEADER  */
+/* start landing */
+.landing{
+    padding-left: var(--padding-main-left);
+    padding-right: var(--padding-main-right);
+    background-image: url(ديكور-مطبخ-2019-3.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text{
+    font-family: serif;
+    text-align: center;
+    max-width: 100%;
+    width: 360px;
+}
+.landing h1{
+    color: #745c47;
+    font-family: fantasy;
+    position: relative;
+}
+.landing p{
+    font-family: cursive;
+    color: #6c7783;
+}
+@media (max-width:768px) {
+    .landing h1{
+        color:  #5e4a38;
+        font-family: auto;
+        position: absolute;
+        top: 25%;
+        right: 27%;
+        font-size: 39px;
+        font-weight: bold;
+        max-width: 100%;
+    }  
+    .landing p{
+        color: #040404;
+    /* font-family: auto; */
+    position: absolute;
+    top: -5%;
+    right: 27%;
+    font-size: 39px;
+    font-weight: bold;
+    max-width: 100%;
+    }
+}
+@media (max-width: 992px){
+    .landing h1{
+        color:  black;
+        font-family: auto;
+        position: absolute;
+        top: 57%;
+        right: 27%;
+        font-size: 39px;
+        font-weight: bold;
+        max-width: 100%;
+    }  
+    .landing p{
+        color: #977706;
+    /* font-family: auto; */
+    position: absolute;
+    top: -5%;
+    right: 27%;
+    font-size: 39px;
+    font-weight: bold;
+    max-width: 100%;
+    }
+}
+@media (max-width:1200px) {
+    .landing h1{
+        color:  black;
+        font-family: auto;
+        position: absolute;
+        top: 57%;
+        right: 27%;
+        font-size: 39px;
+        font-weight: bold;
+        max-width: 100%;
+    }  
+    .landing p{
+        color: #977706;
+    /* font-family: auto; */
+    position: absolute;
+    top: -5%;
+    right: 27%;
+    font-size: 39px;
+    font-weight: bold;
+    max-width: 100%;
+    }
+}
+.feature{
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+.feature .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.feature .container .col{
+    text-align: center;
+}
+.feature .container .col i{
+    color: var(--logo);
+}
+.spaciel-heading{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 100px;
+    background-image:url(صور-ديكورات-مطابخ-مودرن-2016-في-احدث-كتالوج-مطابخ-4.png) ;
+    background-attachment: fixed;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.container p{
+    text-align: center;
+    margin-top: -3px;
+    font-size: 24px;
+    color: #382a1b;
+    margin-bottom: 70px;
+}
+@media (max-width: 768px) {
+    .spaciel-heading{
+        font-size: 60px ;
+        margin-top: -20px;
+    }
+    .container p{
+        margin-top: 12px;
+    }
+}
+.services .srv{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "p1 p2 p5"
+                         "p3 p4 p5";
+}
+.services .srv .port1 ,
+               .port2 ,
+               .port3 ,
+               .port4{
+                   text-align: center;
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: nowrap;
+               } 
+.services .srv .port1 i,
+               .port2 i,
+               .port3 i,
+               .port4 i{
+    color: var(--logo);
+    font-size: 3em;
+    margin-left: 12px;
+}
+.services .srv .port1 p,
+               .port2 p,
+               .port3 p,
+               .port4 p{
+                font-size: 14px;
+                margin-top: -3px;
+               }
+.services .srv .port1 h3,
+               .port2 h3,
+               .port3 h3,
+               .port4 h3{
+                margin-left: -105px;
+                margin-top: 10px;
+               }
+/* PORT 1 */
+.services .srv .port1{
+        grid-area: p1;
+        text-align: center;
+}               
+.services .srv .port1 .text h3{
+        font-family: sans-serif;
+}
+/* PORT 2  */
+.services .srv .port2{
+    grid-area: p2;
+}
+/* PORT 3 */
+.services .srv .port3{
+    grid-area: p3;
+}
+/* PORT4 */
+.services .srv .port4{
+    grid-area: p4;
+}
+.services .srv .port5{ 
+    grid-area: p5;
+}
+.services .srv .port5 img{
+    width: 260px;
+    height: 310px;
+    border-radius: 19px;
+}
+@media (max-width: 768px){
+    .services .srv .port5 img{
+        display: none;
+    }
+    .services .srv{
+        display: flex;
+        flex-direction: column;
+    }     
+}
+@media (max-width: 992px){
+    .services .srv .port5 img{
+        display: none;
+    }
+    .services .srv{
+        display: flex;
+        flex-direction: column;
+    }     
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.portfolio{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.portfolio .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    background-color:  #b1b6b8;
+    grid-gap: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.portfolio .portfolio-content .fol img{
+    max-width: 100%;
+    width: 180 px;
+    height: 350px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.portfolio .portfolio-content .fol img:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.portfolio .portfolio-content .fol .text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #121212;
+    margin-bottom: -40px;
+}
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+.about .about-content .image img{
+    height: 331px;
+    width: 244px;
+}
+.about .about-content .image{
+    
+    position: relative;
+    top: 27px;
+    right: 39px;
+}
+.about .about-content .image::before{
+    content: "";
+    position: absolute;
+    top: -94px;
+    right: 50px;
+    width: 136px;
+    height: 417px;
+    /* background-color: rebeccapurple; */
+    border-left: 80px solid #909ab2;
+    /* border-bottom: 80px solid #33415b; */
+    z-index: -1;
+}
+.about .about-content .image::after{
+    content: "";
+    position: absolute;
+    top: -94px;
+    right: -164px;
+    width: 136px;
+    height: 336px;
+    /* background-color: rebeccapurple; */
+    border-left: 80px solid #33415b;
+    border-bottom: 80px solid #33415b;
+    z-index: -1;
+}
+.about .about-content{
+    display: flex;
+    flex-direction: row;
+}
+.about .about-content .text p{
+    font-size: 19px;
+    margin-left: 200px;
+}
+.about .about-content .text p:not(:last-child){
+    border-bottom: 3px solid #33415b94;
+    padding-bottom: 30px;
+}
+@media (max-width:992px){
+    .about .about-content .image{
+        display: none;
+    }
+    .about .about-content .text p{
+        width:100%;
+        margin: 0;
+    }
+}
+.contect{
+    BACKGROUND-COLOR: #8f9595;
+    border-radius: 12px;
+}
+.contect .info{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.contect .info .label{
+    font-size: 30px;
+    font-weight: 800px;
+    color: #2c4755;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+.contect .info .links{
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    font-weight: 800px;
+    color: #2c4755;;
+
+}
+.contect .info .cociel{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.contect .info .cociel i{
+    margin-left: 10px;
+    color: #2c4755;
+}
+.footer{
+    background-color: #2c4755;
+    padding: 30px 10px ;
+    font-size: 18px;
+}
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
+}
